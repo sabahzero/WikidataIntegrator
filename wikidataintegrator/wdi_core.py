@@ -2016,8 +2016,9 @@ class WDQuantity(WDBaseDataType):
     """
     DTYPE = 'quantity'
 
-    def __init__(self, value, prop_nr, upper_bound=None, lower_bound=None, unit='', is_reference=False, is_qualifier=False,
-                 snak_type='value', references=None, qualifiers=None, rank='normal', check_qualifier_equality=True):
+    def __init__(self, value, prop_nr, upper_bound=None, lower_bound=None, unit='1', is_reference=False,
+                 is_qualifier=False, snak_type='value', references=None, qualifiers=None, rank='normal',
+                 check_qualifier_equality=True):
         """
         Constructor, calls the superclass WDBaseDataType
         :param value: The quantity value
@@ -2029,7 +2030,8 @@ class WDQuantity(WDBaseDataType):
         :param lower_bound: Lower bound of the value if it exists, e.g. for standard deviations
         :type lower_bound: float, str
         :param unit: The WD unit item URL a certain quantity has been measured
-                        in (https://www.wikidata.org/wiki/Wikidata:Units)
+                        in (https://www.wikidata.org/wiki/Wikidata:Units). The default is dimensionless, represented by
+                        a '1'
         :type unit: str
         :type is_reference: boolean
         :param is_qualifier: Whether this snak is a qualifier
