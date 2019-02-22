@@ -37,10 +37,14 @@ setup(
         'simplejson',
         'mwoauth',
         'oauthlib',
-        'pyshex',
+        'pyshex'
         'pyshexc',
         'sparql_slurper',
         'ShExJSG',
         'jsonasobj',
+        'networks',
+        'pandas',
+        'tqdm',
     ],
 )
+
